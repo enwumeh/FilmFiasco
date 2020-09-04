@@ -1,19 +1,60 @@
-# FilmFiasco
 
 # Project Overview
 
 ## Project Name
 
-The name of your project.
+# FilmFiasco
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
-
+My project will display movies as titles, images and description paragraphs. Users will be able to sort through the movies based on popular releases, genres, upcoming movies, and by title. By clicking a see more button you can get more movies to display on the screen. 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
-
+MovieDB API
+"page": 1,
+    "total_results": 2430,
+    "total_pages": 122,
+    "results": [
+        {
+            "popularity": 333.187,
+            "vote_count": 217,
+            "video": false,
+            "poster_path": "/bKthjUmxjHjvJK8FktFfQdmwP12.jpg",
+            "id": 703745,
+            "adult": false,
+            "backdrop_path": "/hIHtyIYgBqHybOgUdoAmveipuiO.jpg",
+            "original_language": "en",
+            "original_title": "Deep Blue Sea 3",
+            "genre_ids": [
+                28,
+                27,
+                878
+            ],
+            "title": "Deep Blue Sea 3",
+            "vote_average": 6.3,
+            "overview": "Dr. Emma Collins and her team are spending their third summer on the island of Little Happy studying the effect of climate change on the great white sharks who come to the nearby nursery every year to give birth. Along with the last two inhabitants of this former fishing village, their peaceful life is disrupted when a \"scientific\" team led by her ex-boyfriend and marine biologist Richard show up looking for three bull sharks who we soon learn aren't just any bull sharks.",
+            "release_date": "2020-07-28"
+        },
+        {
+            "popularity": 72.061,
+            "vote_count": 363,
+            "video": false,
+            "poster_path": "/1cSHEKYYP8Dpi4o1iBVd4U75FYt.jpg",
+            "id": 578189,
+            "adult": false,
+            "backdrop_path": "/7GWDrjxeBsh5onaYf5XHjIM9BA1.jpg",
+            "original_language": "en",
+            "original_title": "Black and Blue",
+            "genre_ids": [
+                28,
+                53
+            ],
+            "title": "Black and Blue",
+            "vote_average": 6.7,
+            "overview": "A fast-paced action thriller about a rookie cop who inadvertently captures the murder of a young drug dealer on her body cam. After realizing that the murder was committed by corrupt cops, she teams up with the one person from her community who is willing to help her as she tries to escape both the criminals out for revenge and the police who are desperate to destroy the incriminating footage.",
+            "release_date": "2019-10-25"
+        },
+      
 ## Wireframes
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
