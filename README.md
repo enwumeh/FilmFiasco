@@ -70,7 +70,6 @@ https://drive.google.com/file/d/1c8eVu2iD46i8vyfi4M6DZzkW3YDVvdqK/view?usp=shari
 ## Project Schedule
 
 
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
 |  Day        |    Deliverable    |     Status
 |------------|--------------------| --------|
@@ -83,7 +82,6 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
 
 ## Timeframes
 
