@@ -7,8 +7,20 @@ FilmFiasco
 
 ## Project Description
 
-I will be using the Moviedb API to create a page that displays a range of movies. I plan on having link options for the user to access popular movies and recent releases. You can also search movies by title through a search bar. 
+I will be using the Moviedb API to create a page that displays a range of movies. I plan on having link options for the user to access popular movies and recent releases. You can also search movies by title through a search bar. I plan to have a link for each movie to check out a trailer
 ## API and Data Sample
+
+
+
+#### Component Hierarchy
+-App.js
+     -Movies.jsx
+          -Trailer.js
+          -Genre.js
+     -NewReleases.jsx
+     -Popular.jsx
+     -GenreSearch.jsx
+
 
 https://www.themoviedb.org/documentation/api
 
@@ -52,20 +64,19 @@ MovieDP API
 
 
 https://drive.google.com/file/d/1c8eVu2iD46i8vyfi4M6DZzkW3YDVvdqK/view?usp=sharing### 
-\MVP/PostMVP
+
+<iframe src="https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_2lFfrPwm1N/preview" width="640" height="480"></iframe>\MVP/PostMVP
 
 
 #### MVP 
 
 - working axios axios/airtable requests
-- Render data on page dnamically
+- Render data on page dynamically
 - working links  
 
 #### PostMVP  
 
-- Add animation/special movement effect
-- see movie GIFs option?
--CSS additional styling
+-CSS additional styling (flexbox)
 
 ## Project Schedule
 
@@ -84,9 +95,12 @@ https://drive.google.com/file/d/1c8eVu2iD46i8vyfi4M6DZzkW3YDVvdqK/view?usp=shari
 ## Priority Matrix
 
 
-## Timeframes
-
 <iframe src="https://drive.google.com/file/d/1iVnp0tSUeg4gWFetqIWI4UwAAzdedHJQ/preview" width="640" height="480"></iframe>
+
+
+
+
+## Timeframes
 
 
 
