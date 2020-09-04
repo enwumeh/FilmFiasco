@@ -3,19 +3,17 @@
 
 ## Project Name
 
-# FilmFiasco
+FilmFiasco
 
 ## Project Description
 
-My project will display movies as titles, images and description paragraphs. Users will be able to sort through the movies based on popular releases, genres, upcoming movies, and by title. By clicking a see more button you can get more movies to display on the screen. 
+I will be using the Moviedb API to create a page that displays a range of movies. I plan on having link options for the user to access popular movies and recent releases. You can also search movies by title through a search bar. 
 ## API and Data Sample
 
-MovieDB API
-"page": 1,
-    "total_results": 2430,
-    "total_pages": 122,
-    "results": [
-        {
+https://www.themoviedb.org/documentation/api
+
+MovieDP API
+   {
             "popularity": 333.187,
             "vote_count": 217,
             "video": false,
@@ -48,49 +46,40 @@ MovieDB API
             "genre_ids": [
                 28,
                 53
-            ],
-            "title": "Black and Blue",
-            "vote_average": 6.7,
-            "overview": "A fast-paced action thriller about a rookie cop who inadvertently captures the murder of a young drug dealer on her body cam. After realizing that the murder was committed by corrupt cops, she teams up with the one person from her community who is willing to help her as she tries to escape both the criminals out for revenge and the police who are desperate to destroy the incriminating footage.",
-            "release_date": "2019-10-25"
-        },
-      
-## Wireframes
+           
+                80,
+                18## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
-### MVP/PostMVP
+https://drive.google.com/file/d/1c8eVu2iD46i8vyfi4M6DZzkW3YDVvdqK/view?usp=sharing### 
+\MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- working axios axios/airtable requests
+- Render data on page dnamically
+- working links  
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
-- Use local storage to save user favorites
+- Add animation/special movement effect
+- see movie GIFs option?
+-CSS additional styling
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
 
 You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
-|  Day | Deliverable | Status
-|---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|July 13| Project Approval | Incomplete
-|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
-|July 17| Presentations | Incomplete
+|  Day        |    Deliverable    |     Status
+|------------|--------------------| --------|
+|September 4| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|September 4| Project Approval | Incomplete
+|September 5| Sucessful API Request | Incomplete
+|September 6-7| Application Structure React App with core Components | Incomplete
+|September 8-9| Initial Clickable Model  | Incomplete
+|September 11| Presentations | Incomplete
 
 ## Priority Matrix
 
@@ -98,15 +87,17 @@ Include a full list of features that have been prioritized based on the `Time an
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
+<iframe src="https://drive.google.com/file/d/1iVnp0tSUeg4gWFetqIWI4UwAAzdedHJQ/preview" width="640" height="480"></iframe>
 
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+
+| Component                        | Priority | Estimated Time  | Time Invested | Actual Time |
+| -------------------------------- | :---:    |  :------------:   | :--------:  | :---------: |
+| Working/Traversing API endpoints | H        |       5hrs        |             |             |
+| Creating/Rendering components    | H        |       6hrs        |             |             |
+| Working with API                 | H        |       7hrs        |             |             |
+| CSS Styling.                     | H        |       7hrs        |             |             |
+| Total                            | H        |       25hrs       |             |             |
 
 ## Code Snippet
 
