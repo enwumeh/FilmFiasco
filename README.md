@@ -12,7 +12,7 @@ I will be using the Moviedb API to create a page that displays a range of movies
 
 
 
-#### Component Hierarchy
+### Component Hierarchy
 -App.js
      -Movies.jsx
           -Trailer.js
@@ -70,9 +70,10 @@ https://drive.google.com/file/d/1c8eVu2iD46i8vyfi4M6DZzkW3YDVvdqK/view?usp=shari
 
 #### MVP 
 
-- working axios axios/airtable requests
+- working axios /airtable data usage
 - Render data on page dynamically
 - working links  
+-all components in place
 
 #### PostMVP  
 
