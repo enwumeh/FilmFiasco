@@ -7,10 +7,8 @@ FilmFiasco
 
 ## Project Description
 
-I will be using the Moviedb API to create a page that displays a range of movies. I plan on having link options for the user to access popular movies and recent releases. You can also search movies by title through a search bar. I plan to have a link for each movie to check out a trailer
+I will be making an app that displays a selection of movies. I plan on having link options for the user to access popular movies and recent releases. You can also search movies by title through a search bar. I plan to have a link for each movie to check out a trailer. Airtable will be used, where I will be seeding data from an external API
 ## API and Data Sample
-
-
 
 ### Component Hierarchy
 -App.js
@@ -59,13 +57,13 @@ MovieDP API
                 28,
                 53
            
-                80,
-                18## Wireframes
+   ## Wireframes
 
 
-https://drive.google.com/file/d/1c8eVu2iD46i8vyfi4M6DZzkW3YDVvdqK/view?usp=sharing### 
-
-<iframe src="https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_2lFfrPwm1N/preview" width="640" height="480"></iframe>\MVP/PostMVP
+Desktop: "https://drive.google.com/file/d/1c8eVu2iD46i8vyfi4M6DZzkW3YDVvdqK/preview"
+Mobile: "https://drive.google.com/file/d/10alqHiUZGAtAswnhUN0RgvGy-T9SIC6Y/preview" 
+Tablet: "https://drive.google.com/file/d/1aUrGSqXimPbAGA1rVm-Wu4GLnkHkJq4E/preview" 
+Link to movie details:  "https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_2lFfrPwm1N/preview" 
 
 
 #### MVP 
@@ -96,7 +94,7 @@ https://drive.google.com/file/d/1c8eVu2iD46i8vyfi4M6DZzkW3YDVvdqK/view?usp=shari
 ## Priority Matrix
 
 
-<iframe src="https://drive.google.com/file/d/1iVnp0tSUeg4gWFetqIWI4UwAAzdedHJQ/preview" width="640" height="480"></iframe>
+Priority Matrix "https://drive.google.com/file/d/1iVnp0tSUeg4gWFetqIWI4UwAAzdedHJQ/preview" 
 
 
 
@@ -107,11 +105,19 @@ https://drive.google.com/file/d/1c8eVu2iD46i8vyfi4M6DZzkW3YDVvdqK/view?usp=shari
 
 | Component                        | Priority | Estimated Time  | Time Invested | Actual Time |
 | -------------------------------- | :---:    |  :------------:   | :--------:  | :---------: |
-| Working/Traversing API endpoints | H        |       5hrs        |             |             |
-| Creating/Rendering components    | H        |       6hrs        |             |             |
-| Working with API                 | H        |       7hrs        |             |             |
+| Creating Functional API calls    | H        |       5hrs        |             |             |
+| Working/Traversing API endpoints | H        |       8hrs        |             |             |
+| React Router/Navigating to Links | H        |       5hrs        |             |             |
+| Creating components dynamically  | H        |       6hrs        |             |             |
 | CSS Styling.                     | H        |       7hrs        |             |             |
-| Total                            | H        |       25hrs       |             |             |
+| Linting/Debugging                | H        |       6hrs        |             |             |
+| Total                            | H        |       32hrs       |             |             |
+
+
+
+## SWOT Analysis
+One weakness I have coming into the project is my knowledge level of certain concepts. I am still a bit confusd on React Router and how to use Airtable with an external API, so I plan on rewatching those lectures to get a better understanding. Also, I know I will have to use useParrams() at some point, but I don't know exactly how so I will learn this concept in more detail before starting. I believe that I am good at getting the layout of components organized, and I have a good understanding of how compontents interact with one another.
+
 
 ## Code Snippet
 
