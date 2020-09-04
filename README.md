@@ -20,7 +20,6 @@ I will be making an app that displays a selection of movies. I plan on having li
      -GenreSearch.jsx
 
 
-https://www.themoviedb.org/documentation/api
 
 MovieDP API
    {
