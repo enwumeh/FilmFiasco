@@ -70,15 +70,16 @@ https://drive.google.com/file/d/1c8eVu2iD46i8vyfi4M6DZzkW3YDVvdqK/view?usp=shari
 ## Project Schedule
 
 
-
-|  Day        |    Deliverable    |     Status
-|------------|--------------------| --------|
-|September 4| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|September 4| Project Approval | Incomplete
-|September 5| Sucessful API Request | Incomplete
-|September 6-7| Application Structure React App with core Components | Incomplete
-|September 8-9| Initial Clickable Model  | Incomplete
-|September 11| Presentations | Incomplete
+   
+|  Day        |                    Deliverable                     |  Status
+|------------ |--------------------------------------------------- | ----------|
+|September 4  | Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|September 4  | Project Approval                                   | Incomplete
+|September 5  | Sucessful API Usage                                | Incomplete
+|September 6  | React App structure with core Components           | Incomplete
+|September 7  | Adding funcitonality to each component             | Incomplete
+|September 8-9| Initial Clickable Model                            | Incomplete
+|September 11 | Presentations                                      | Incomplete
 
 ## Priority Matrix
 
