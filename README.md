@@ -7,17 +7,23 @@ FilmFiasco
 
 ## Project Description
 
-I will be making an app that displays a selection of movies. I plan on having link options for the user to access popular movies and recent releases. You can also search movies by title through a search bar. I plan to have a link for each movie to check out a trailer. Airtable will be used, where I will be seeding data from an external API
+I will be making an app that displays a selection of movies. I plan on having link options for the user to access popular movies and recent releases, as well as popular shows. You can also search movies by title through a search bar. I plan to have a link for each movie and tv show to check out a trailer. Airtable will be used, where I will be seeding data from an external API 
 ## API and Data Sample
 
 ### Component Hierarchy
 -App.js
-     -Movies.jsx
-          -Trailer.js
+     -Components.jsx
+       -Movie.js
+       -MovieBoard.js
+       -MovieHome.js
+       -movieLink.jsx
           -Genre.js
-     -NewReleases.jsx
-     -Popular.jsx
-     -GenreSearch.jsx
+	  -Banner.js
+	  -Video.js
+       -showsLink.jsx
+          -Genre.js
+	  -Banner.js
+	  -Video.js
 
 
 
