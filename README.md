@@ -1,1 +1,138 @@
-# FilmFiasco
+
+# Project Overview
+
+## Project Name
+
+FilmFiasco
+
+## Project Description
+
+I will be making an app that displays a selection of movies. I plan on having link options for the user to access popular movies and recent releases, as well as popular shows. You can also search movies by title through a search bar. I plan to have a link for each movie and tv show to check out a trailer. Airtable will be used, where I will be seeding data from an external API 
+## API and Data Sample
+
+### Component Hierarchy
+-App.js
+     -Components.jsx
+       -Movie.js
+       -MovieBoard.js
+       -MovieHome.js
+       -movieLink.jsx
+          -Genre.js
+	  -Banner.js
+	  -Video.js
+       -showsLink.jsx
+          -Genre.js
+	  -Banner.js
+	  -Video.js
+
+
+
+MovieDP API
+   {
+            "popularity": 333.187,
+            "vote_count": 217,
+            "video": false,
+            "poster_path": "/bKthjUmxjHjvJK8FktFfQdmwP12.jpg",
+            "id": 703745,
+            "adult": false,
+            "backdrop_path": "/hIHtyIYgBqHybOgUdoAmveipuiO.jpg",
+            "original_language": "en",
+            "original_title": "Deep Blue Sea 3",
+            "genre_ids": [
+                28,
+                27,
+                878
+            ],
+            "title": "Deep Blue Sea 3",
+            "vote_average": 6.3,
+            "overview": "Dr. Emma Collins and her team are spending their third summer on the island of Little Happy studying the effect of climate change on the great white sharks who come to the nearby nursery every year to give birth. Along with the last two inhabitants of this former fishing village, their peaceful life is disrupted when a \"scientific\" team led by her ex-boyfriend and marine biologist Richard show up looking for three bull sharks who we soon learn aren't just any bull sharks.",
+            "release_date": "2020-07-28"
+        },
+        {
+            "popularity": 72.061,
+            "vote_count": 363,
+            "video": false,
+            "poster_path": "/1cSHEKYYP8Dpi4o1iBVd4U75FYt.jpg",
+            "id": 578189,
+            "adult": false,
+            "backdrop_path": "/7GWDrjxeBsh5onaYf5XHjIM9BA1.jpg",
+            "original_language": "en",
+            "original_title": "Black and Blue",
+            "genre_ids": [
+                28,
+                53
+           
+   ## Wireframes
+
+
+Desktop: "https://drive.google.com/file/d/1c8eVu2iD46i8vyfi4M6DZzkW3YDVvdqK/preview"
+Mobile: "https://drive.google.com/file/d/10alqHiUZGAtAswnhUN0RgvGy-T9SIC6Y/preview" 
+Tablet: "https://drive.google.com/file/d/1aUrGSqXimPbAGA1rVm-Wu4GLnkHkJq4E/preview" 
+Link to movie details:  "https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_2lFfrPwm1N/preview" 
+
+
+#### MVP 
+
+- working axios /airtable data usage
+- Render data on page dynamically
+- working links  
+-all components in place
+
+#### PostMVP  
+
+-CSS additional styling (flexbox)
+
+## Project Schedule
+
+
+   
+|  Day        |                    Deliverable                     |  Status
+|------------ |--------------------------------------------------- | ----------|
+|September 4  | Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|September 4  | Project Approval                                   | Incomplete
+|September 5  | Sucessful API Usage                                | Incomplete
+|September 6  | React App structure with core Components           | Incomplete
+|September 7  | Adding funcitonality to each component             | Incomplete
+|September 8-9| Initial Clickable Model                            | Incomplete
+|September 11 | Presentations                                      | Incomplete
+
+## Priority Matrix
+
+
+Priority Matrix "https://drive.google.com/file/d/1iVnp0tSUeg4gWFetqIWI4UwAAzdedHJQ/preview" 
+
+
+
+
+## Timeframes
+
+
+
+| Component                        | Priority | Estimated Time  | Time Invested | Actual Time |
+| -------------------------------- | :---:    |  :------------:   | :--------:  | :---------: |
+| Creating Functional API calls    | H        |       5hrs        |             |             |
+| Working/Traversing API endpoints | H        |       8hrs        |             |             |
+| React Router/Navigating to Links | H        |       5hrs        |             |             |
+| Creating components dynamically  | H        |       6hrs        |             |             |
+| CSS Styling.                     | H        |       7hrs        |             |             |
+| Linting/Debugging                | H        |       6hrs        |             |             |
+| Total                            | H        |       32hrs       |             |             |
+
+
+
+## SWOT Analysis
+One weakness I have coming into the project is my knowledge level of certain concepts. I am still a bit confusd on React Router and how to use Airtable with an external API, so I plan on rewatching those lectures to get a better understanding. Also, I know I will have to use useParrams() at some point, but I don't know exactly how so I will learn this concept in more detail before starting. I believe that I am good at getting the layout of components organized, and I have a good understanding of how compontents interact with one another.
+
+
+## Code Snippet
+
+Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+
+```
+function reverse(string) {
+	// here is the code to reverse a string of text
+}
+```
+
+## Change Log
+ Use this section to document what changes were made and the reasoning behind those changes.  
