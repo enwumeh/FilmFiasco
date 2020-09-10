@@ -11,9 +11,9 @@ I will be making an app that displays a selection of movies. I plan on having li
 ## API and Data Sample
 
 ### Component Hierarchy
--App.js
-     -Components.jsx
-       -Movie.js
+*App.js
+     *Components.jsx
+       *Movie.js
        -MovieBoard.js
        -MovieHome.js
        -movieLink.jsx
