@@ -28,6 +28,25 @@ I will be making an app that displays a selection of movies. I plan on having li
 
 
 MovieDP API
+
+{
+genres: [
+{
+id: 28,
+name: "Action"
+},
+{
+id: 12,
+name: "Adventure"
+},
+{
+id: 16,
+name: "Animation"
+},
+{
+id: 35,
+name: "Comedy"
+}
    {
             "popularity": 333.187,
             "vote_count": 217,
