@@ -11,25 +11,26 @@ I will be making an app that displays a selection of movies. I plan on having li
 ## API and Data Sample
 
 ### Component Hierarchy
--App.js
-     -Components.jsx
+
+ 
+   
+    -App.js
+     -Components
        -Movie.js
        -MovieBoard.js
        -MovieHome.js
-       -movieLink.jsx
+       -movieLink.js
           -Genre.js
 	  -Banner.js
 	  -Video.js
-       -showsLink.jsx
-          -Genre.js
-	  -Banner.js
-	  -Video.js
+      
 
 
 
 MovieDP API
-   {
-            "popularity": 333.187,
+
+```
+           "popularity": 333.187,
             "vote_count": 217,
             "video": false,
             "poster_path": "/bKthjUmxjHjvJK8FktFfQdmwP12.jpg",
@@ -47,20 +48,10 @@ MovieDP API
             "vote_average": 6.3,
             "overview": "Dr. Emma Collins and her team are spending their third summer on the island of Little Happy studying the effect of climate change on the great white sharks who come to the nearby nursery every year to give birth. Along with the last two inhabitants of this former fishing village, their peaceful life is disrupted when a \"scientific\" team led by her ex-boyfriend and marine biologist Richard show up looking for three bull sharks who we soon learn aren't just any bull sharks.",
             "release_date": "2020-07-28"
-        },
-        {
-            "popularity": 72.061,
-            "vote_count": 363,
-            "video": false,
-            "poster_path": "/1cSHEKYYP8Dpi4o1iBVd4U75FYt.jpg",
-            "id": 578189,
-            "adult": false,
-            "backdrop_path": "/7GWDrjxeBsh5onaYf5XHjIM9BA1.jpg",
-            "original_language": "en",
-            "original_title": "Black and Blue",
-            "genre_ids": [
-                28,
-                53
+	    
+	    
+```
+        
            
    ## Wireframes
 
@@ -88,11 +79,11 @@ Link to movie details:  "https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_
    
 |  Day        |                    Deliverable                     |  Status
 |------------ |--------------------------------------------------- | ----------|
-|September 4  | Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|September 4  | Project Approval                                   | Incomplete
+|September 4  | Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|September 4  | Project Approval                                   | Complete
 |September 5  | Sucessful API Usage                                | Incomplete
-|September 6  | React App structure with core Components           | Incomplete
-|September 7  | Adding funcitonality to each component             | Incomplete
+|September 6  | React App structure with core Components           | Complete
+|September 7  | Adding funcitonality to each component             | Complete
 |September 8-9| Initial Clickable Model                            | Incomplete
 |September 11 | Presentations                                      | Incomplete
 
@@ -113,8 +104,8 @@ Priority Matrix "https://drive.google.com/file/d/1iVnp0tSUeg4gWFetqIWI4UwAAzdedH
 | Creating Functional API calls    | H        |       5hrs        |             |             |
 | Working/Traversing API endpoints | H        |       8hrs        |             |             |
 | React Router/Navigating to Links | H        |       5hrs        |             |             |
-| Creating components dynamically  | H        |       6hrs        |             |             |
-| CSS Styling.                     | H        |       7hrs        |             |             |
+| Creating components dynamically  | H        |       6hrs        |   14        |             |
+| CSS Styling                      | H        |       7hrs        |             |             |
 | Linting/Debugging                | H        |       6hrs        |             |             |
 | Total                            | H        |       32hrs       |             |             |
 
@@ -126,12 +117,14 @@ One weakness I have coming into the project is my knowledge level of certain con
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+let display = <div/>
+    if (status && !loading) {
+      display = (
+      <MovieHome movie={data} />
+    )
+    }
 ```
 
 ## Change Log
