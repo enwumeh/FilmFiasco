@@ -27,9 +27,9 @@ I will be making an app that displays a selection of movies. I plan on having li
 
 
 
-MovieDP API```
+MovieDP API
 
-
+```
            "popularity": 333.187,
             "vote_count": 217,
             "video": false,
@@ -50,7 +50,7 @@ MovieDP API```
             "release_date": "2020-07-28"
 	    
 	    
-	    ```
+```
         
            
    ## Wireframes
@@ -79,11 +79,11 @@ Link to movie details:  "https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_
    
 |  Day        |                    Deliverable                     |  Status
 |------------ |--------------------------------------------------- | ----------|
-|September 4  | Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|September 4  | Project Approval                                   | Incomplete
+|September 4  | Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|September 4  | Project Approval                                   | Complete
 |September 5  | Sucessful API Usage                                | Incomplete
-|September 6  | React App structure with core Components           | Incomplete
-|September 7  | Adding funcitonality to each component             | Incomplete
+|September 6  | React App structure with core Components           | Complete
+|September 7  | Adding funcitonality to each component             | Complete
 |September 8-9| Initial Clickable Model                            | Incomplete
 |September 11 | Presentations                                      | Incomplete
 
