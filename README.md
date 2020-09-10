@@ -29,26 +29,10 @@ I will be making an app that displays a selection of movies. I plan on having li
 
 MovieDP API
 
-{
-genres: [
-{
-id: 28,
-name: "Action"
-},
-{
-id: 12,
-name: "Adventure"
-},
-{
-id: 16,
-name: "Animation"
-},
-{
-id: 35,
-name: "Comedy"
-}
+
    {
-            "popularity": 333.187,
+           - 
+	   "popularity": 333.187,
             "vote_count": 217,
             "video": false,
             "poster_path": "/bKthjUmxjHjvJK8FktFfQdmwP12.jpg",
@@ -66,20 +50,7 @@ name: "Comedy"
             "vote_average": 6.3,
             "overview": "Dr. Emma Collins and her team are spending their third summer on the island of Little Happy studying the effect of climate change on the great white sharks who come to the nearby nursery every year to give birth. Along with the last two inhabitants of this former fishing village, their peaceful life is disrupted when a \"scientific\" team led by her ex-boyfriend and marine biologist Richard show up looking for three bull sharks who we soon learn aren't just any bull sharks.",
             "release_date": "2020-07-28"
-        },
-        {
-            "popularity": 72.061,
-            "vote_count": 363,
-            "video": false,
-            "poster_path": "/1cSHEKYYP8Dpi4o1iBVd4U75FYt.jpg",
-            "id": 578189,
-            "adult": false,
-            "backdrop_path": "/7GWDrjxeBsh5onaYf5XHjIM9BA1.jpg",
-            "original_language": "en",
-            "original_title": "Black and Blue",
-            "genre_ids": [
-                28,
-                53
+        }
            
    ## Wireframes
 
