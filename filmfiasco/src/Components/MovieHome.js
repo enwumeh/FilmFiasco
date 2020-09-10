@@ -19,8 +19,8 @@ class MovieHome extends Component  {
   }
     
     //list of possible movie genres
-    const movieGenre = movie.genres
-    console.log(movie.genres)
+    const movieGenre = this.movie.genres 
+    console.log(movieGenre)
   const genreOptions = Object.keys(movieGenre).map(genre => <Genre key={genre} genre={movieGenre[genre]} />)
   const movieVids = movie.videos;
   const vidOptions = Object.keys(movieVids).map(vid => <Video key={vid} trailer={movieVids[vid]} />)

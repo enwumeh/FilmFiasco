@@ -1,6 +1,6 @@
 import React,{Component } from 'react';
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 import MovieBoard from './Components/MovieBoard'
 //import MovieHome from './Components/MovieHome'
 import './App.css';
@@ -65,6 +65,15 @@ class App extends Component {
     this.setState({ reviews: response.data.records })
   };
 
+  postData = async () => {
+    const airtableUrl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/mymoviedata`
+    const posted = await axios.post(airtableUrl, {
+     "fields": {
+        
+      },
+    });
+  };
+
   //search form onSubmit
   onSubmit(event) {
     event.preventDefault()
@@ -90,34 +99,36 @@ class App extends Component {
     console.log(this.state.reviews)
     const { data } = this.state
     const { loading } = this.state
+    const {reviews} = this.state
     // const {movie } = this.state
   
 
   return (
-    <div>
+    <span>
     <div className='app-title'>Film Fiasco
       <li className="banner-item">
-      <Link to="/">Home</Link>
+          <Link to="/">
+            Movies
+      </Link>
       </li>
-      <li className="banner-item">Movies
-      </li>
+      
       <form onSubmit={this.onSubmit}>
         <input type ="text" ref ={(input) => {this.userTyped = input}}  className="search-input" placeholder="Search up Movies"/>
         </form>
         {this.state.reviews.map((review, index) => {
           return (
-            <div>
-              <h3>{review.fields.title}</h3>
-              <h3>{}</h3>
-            </div>
+            <div key = {index}>
+            <span className="reviews">
+              <h6> = {review.fields.title}: {review.fields.review} {review.fields.rating}</h6>
+              </span>
+         <Route path="/">
+                {Object.keys(data).map(film => <MovieBoard id={film} specs={data[film]}/>)}
+              </Route>
+              </div>
           )
         })}
-        {/* <MovieBoard specs={data}/> */}
-         {Object.keys(data).map(film => <MovieBoard key={film} specs={data[film]} />)} 
-      {/* <p className="button-button">No Movies On Display</p> */}
-
-      </div>
-      </div>
+     </div>
+      </span> 
   );
   }
 }
