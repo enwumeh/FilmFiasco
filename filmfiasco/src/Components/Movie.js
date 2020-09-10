@@ -19,7 +19,7 @@ class Movie extends Component {
   componentDidMount() {
     const moviesID = this.props.params.moviesID
 
-    const url = 'http://api.themoviedb.org/3/movie/${moviesID}?api_key=${apiKey}&append_to_response=videos'
+    const url = `http://api.themoviedb.org/3/movie/${moviesID}?api_key=${apiKey}&append_to_response=videos`
     axios.get(url)
       .then((response) => {
         const movie = response.data

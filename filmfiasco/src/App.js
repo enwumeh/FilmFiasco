@@ -16,7 +16,10 @@ class App extends Component {
      
       loading: true,
       data: [],
+      reviews: []
     }
+      
+      //make sure to give credit to any sources!
       ;
     // this.Url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US`
     this.fetchData = this.fetchData.bind(this)
@@ -30,22 +33,38 @@ class App extends Component {
      axios.get(dataSender)
        .then((response) => {
          const theData = response.data.results
-         console.log(theData[2].video)
-        this.setState({data: theData, loading: false})
+         console.log(theData)
+         this.setState({ data: theData, loading: false, })
     })
        .catch((error) => {
         console.log(error)
       this.setState({loading: false})
     })
   }
+
+  //another axios request for post and delete here?
   
+
+  // makeAirtableCall = (url) => {
+  
+  // }
 
   componentDidMount() {
     this.fetchData(`https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`)
-
+    this.getData()
   }
   
-  
+
+  getData = async () => {
+    const airtableUrl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/mymoviedata`
+    const response = await axios.get(airtableUrl, {
+      headers: {
+        'Authorization': `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
+      },
+    });
+    this.setState({ reviews: response.data.records })
+  };
+
   //search form onSubmit
   onSubmit(event) {
     event.preventDefault()
@@ -68,9 +87,9 @@ class App extends Component {
   }
 
   render() {
-  
+    console.log(this.state.reviews)
     const { data } = this.state
-    // const { loading } = this.state
+    const { loading } = this.state
     // const {movie } = this.state
   
 
@@ -82,13 +101,20 @@ class App extends Component {
       </li>
       <li className="banner-item">Movies
       </li>
-        {/* <MovieHome movie={this.state.movie} /> */}
       <form onSubmit={this.onSubmit}>
         <input type ="text" ref ={(input) => {this.userTyped = input}}  className="search-input" placeholder="Search up Movies"/>
         </form>
-        <MovieBoard specs={data}/>
-         {/* {Object.keys(data).map(film => <MovieBoard key={film} specs={data[movie]} />)}  */}
-      <p className="button-button">No Movies On Display</p>
+        {this.state.reviews.map((review, index) => {
+          return (
+            <div>
+              <h3>{review.fields.title}</h3>
+              <h3>{}</h3>
+            </div>
+          )
+        })}
+        {/* <MovieBoard specs={data}/> */}
+         {Object.keys(data).map(film => <MovieBoard key={film} specs={data[film]} />)} 
+      {/* <p className="button-button">No Movies On Display</p> */}
 
       </div>
       </div>
