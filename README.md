@@ -11,12 +11,13 @@ I will be making an app that displays a selection of movies. I plan on having li
 ## API and Data Sample
 
 ### Component Hierarchy
-*App.js
-     *Components.jsx
-       *Movie.js
-       *MovieBoard.js
-       
-       
+
+   -App
+   
+    -App.jsx
+     -Components.jsx
+       -Movie.js
+       -MovieBoard.jsx
        -MovieHome.js
        -movieLink.jsx
           -Genre.js
