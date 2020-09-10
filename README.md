@@ -117,12 +117,14 @@ One weakness I have coming into the project is my knowledge level of certain con
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+let display = <div/>
+    if (status && !loading) {
+      display = (
+      <MovieHome movie={data} />
+    )
+    }
 ```
 
 ## Change Log
