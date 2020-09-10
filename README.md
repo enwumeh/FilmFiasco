@@ -14,7 +14,9 @@ I will be making an app that displays a selection of movies. I plan on having li
 *App.js
      *Components.jsx
        *Movie.js
-       -MovieBoard.js
+       *MovieBoard.js
+       
+       
        -MovieHome.js
        -movieLink.jsx
           -Genre.js
