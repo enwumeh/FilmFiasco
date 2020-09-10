@@ -104,8 +104,8 @@ Priority Matrix "https://drive.google.com/file/d/1iVnp0tSUeg4gWFetqIWI4UwAAzdedH
 | Creating Functional API calls    | H        |       5hrs        |             |             |
 | Working/Traversing API endpoints | H        |       8hrs        |             |             |
 | React Router/Navigating to Links | H        |       5hrs        |             |             |
-| Creating components dynamically  | H        |       6hrs        |             |             |
-| CSS Styling.                     | H        |       7hrs        |             |             |
+| Creating components dynamically  | H        |       6hrs        |   14        |             |
+| CSS Styling                      | H        |       7hrs        |             |             |
 | Linting/Debugging                | H        |       6hrs        |             |             |
 | Total                            | H        |       32hrs       |             |             |
 
