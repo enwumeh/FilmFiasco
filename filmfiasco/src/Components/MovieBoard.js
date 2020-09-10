@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 
 const MovieBoard = (props) => {
   const { specs } = props
-  const picPath = `https://image.tmdb.org/t/p/w200/${specs.poster_path}`
+  const picPath = `https://image.tmdb.org/t/p/w500/${specs.poster_path}`
+
   const linkToMovie = `/movie/${specs.id}`
   const style = {
     backgroundImage: `url(${picPath})`

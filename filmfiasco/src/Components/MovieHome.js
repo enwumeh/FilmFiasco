@@ -12,21 +12,40 @@ class MovieHome extends Component  {
   
 
   render() {
-  const { movie } = this.props;
+    const { movie } = this.props;
   const picPath = `https://image.tmdb.org/t/p/w200/${movie.poster_path}`
   const style = {
     backgroundImage: `url${picPath}`
   }
-  const movieGenre = movie.genres
+    
+    //list of possible movie genres
+    const movieGenre = movie.genres
+    console.log(movie.genres)
   const genreOptions = Object.keys(movieGenre).map(genre => <Genre key={genre} genre={movieGenre[genre]} />)
-  const movieVids = movie.videos.results;
+  const movieVids = movie.videos;
   const vidOptions = Object.keys(movieVids).map(vid => <Video key={vid} trailer={movieVids[vid]} />)
-  //something here to do dif banners depending if movie is released or not
 
   return (
     <div>
-      <div className="container-element">
-        <Banner />
+      <div className="container">
+        <Banner heading ={movie.original_title} />
+      </div>
+      <div className="container">
+        <div className="board" style={style} />
+        <h4 className="filmtitle">
+          {movie.original_title}
+        </h4>
+        <p className="overview">
+          {movie.overview}
+        </p>
+        {/* <span className="inline">
+          {genreOptions}
+        </span> */}
+        <br /><br />
+        <h5 className="filmtitle">Trailers:</h5>
+        <div className="center-text">
+          {movieVids}
+        </div>
       </div>
     </div>
   )
@@ -34,8 +53,6 @@ class MovieHome extends Component  {
 
 }
 
-
-  
 
 
     

@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Homescreen from './Components/Homescreen'
 import './index.css';
 import App from './App';
-import Movie from './Components/Movie'
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router} from 'react-router-dom'
 
