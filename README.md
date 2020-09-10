@@ -27,10 +27,10 @@ I will be making an app that displays a selection of movies. I plan on having li
 
 
 
-MovieDP API
+MovieDP API```
 
 
-          ```  "popularity": 333.187,
+           "popularity": 333.187,
             "vote_count": 217,
             "video": false,
             "poster_path": "/bKthjUmxjHjvJK8FktFfQdmwP12.jpg",
@@ -48,6 +48,8 @@ MovieDP API
             "vote_average": 6.3,
             "overview": "Dr. Emma Collins and her team are spending their third summer on the island of Little Happy studying the effect of climate change on the great white sharks who come to the nearby nursery every year to give birth. Along with the last two inhabitants of this former fishing village, their peaceful life is disrupted when a \"scientific\" team led by her ex-boyfriend and marine biologist Richard show up looking for three bull sharks who we soon learn aren't just any bull sharks.",
             "release_date": "2020-07-28"
+	    
+	    
 	    ```
         
            
