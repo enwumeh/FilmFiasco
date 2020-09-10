@@ -12,21 +12,18 @@ I will be making an app that displays a selection of movies. I plan on having li
 
 ### Component Hierarchy
 
-   -App
+ 
    
-    -App.jsx
-     -Components.jsx
+    -App.js
+     -Components
        -Movie.js
-       -MovieBoard.jsx
+       -MovieBoard.js
        -MovieHome.js
-       -movieLink.jsx
+       -movieLink.js
           -Genre.js
 	  -Banner.js
 	  -Video.js
-       -showsLink.jsx
-          -Genre.js
-	  -Banner.js
-	  -Video.js
+      
 
 
 
