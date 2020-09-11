@@ -42,13 +42,7 @@ class App extends Component {
     })
   }
 
-  //another axios request for post and delete here?
-  
-
-  // makeAirtableCall = (url) => {
-  
-  // }
-
+ 
   componentDidMount() {
     this.fetchData(`https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`)
     this.getData()
@@ -69,7 +63,7 @@ class App extends Component {
     const airtableUrl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/mymoviedata`
     const posted = await axios.post(airtableUrl, {
      "fields": {
-        
+        title, te
       },
     });
   };
