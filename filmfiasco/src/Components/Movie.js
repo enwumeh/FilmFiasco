@@ -30,31 +30,31 @@ class Movie extends Component {
         console.log(error)
         this.setState({loading: false, status: false})
     })
-  }
+  } 
 
   render() {
     const { loading } = this.state
     const {status} = this.state
     const { data } = this.state
     
-    let display = <div/>
+    let display;
     if (status && !loading) {
-      display = (
+      display = 
       <MovieHome movie={data} />
-    )
+    
     }
-    else if (!status && !loading) {
-      display = (
-        <div>
-        <button className="bigButton">
-          hmmm We can't seem to find the movie
-        </button>
-        <Link className="button" to="/movies">
-            Find More Movies
-        </Link>
-          </div>
-      )
-    }
+    // else if (!status && !loading) {
+    //   display = (
+    //     <div>
+    //     <button className="bigButton">
+    //       hmmm We can't seem to find the movie
+    //     </button>
+    //     <Link className="button" to="/">
+    //         Find More Movies
+    //     </Link>
+    //       </div>
+    //   )
+    // }
     return (
       <div>
         {display}

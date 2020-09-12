@@ -78,6 +78,8 @@ class App extends Component {
         },
       }
     );
+    this.setState({ title: posted.data.records });
+
   };
 
   //search form onSubmit
@@ -143,9 +145,6 @@ class App extends Component {
                     ))}
                   </Route>
                 </div>
-            
-                
-                
                 <span className="reviews">
                     <h6>
                       {" "}
@@ -153,26 +152,35 @@ class App extends Component {
                       {review.fields.rating}
                     </h6>
                 </span>
-                
 
+               <h2>Post your Own Movie!</h2>
+                <div className="userMovie">
                 <label htmlFor="title">Movie Title</label>
                 <input
                   type="text"
                   id="title"
                   onSubmit={(e) => this.state.title(e.target.value)}
-                />
+                  />
+                </div>
+                
+                <div className="userMovie">
+
                 <label htmlFor="title">How would You Rate this movie?</label>
                 <input
                   type="text"
                   id="rating"
                   onSubmit={(e) => this.state.rating(e.target.value)}
-                />
+                  />
+                </div>
+                
+                <div className="userMovie">
                 <label htmlFor="text">Review this Movie</label>
                 <input
                   type="text"
-                  id="text"
+                  id="review"
                   onSubmit={(e) => this.state.review(e.target.value)}
-                />
+                  />
+                  </div>
                 <button onClick={() => this.postData(title, rating, review)}>
                   Post
                 </button>

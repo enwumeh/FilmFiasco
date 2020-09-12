@@ -50,7 +50,29 @@ h6 {
   color: white;
 }
 
+h2 {
+  color: rgb(224, 20, 20);
+  text-align: center
+}
+
 label {
   color: white;
   font-weight: bold;
+}
+
+.userMovie {
+  margin: 0 auto;
+  text-align: center;
+}
+
+button {
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 50%;
+  height: 30px;
+  width: 40px;
+  font-weight: bold;
+  
 }

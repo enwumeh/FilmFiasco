@@ -7,9 +7,6 @@ const Banner = (props) => {
   return (
     <div className="container">
       <ol className = "banner">
-      <li className="banner-item">
-          <Link to="/">Home</Link>
-        </li>
         <li className="banner-item">
         <Link to="/movies">Movies</Link>
       </li>
