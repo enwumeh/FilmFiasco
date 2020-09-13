@@ -8,6 +8,10 @@ import { render } from 'react-dom'
 class MovieHome extends Component  {
   constructor(props) {
     super()
+    // this.state = {
+    //   movie: {},
+    
+    // }
   }
   
 
@@ -19,14 +23,20 @@ class MovieHome extends Component  {
   }
     
     //list of possible movie genres
-    const movieGenre = this.movie.genres 
-    console.log(movieGenre)
-  const genreOptions = Object.keys(movieGenre).map(genre => <Genre key={genre} genre={movieGenre[genre]} />)
-  const movieVids = movie.videos;
-  const vidOptions = Object.keys(movieVids).map(vid => <Video key={vid} trailer={movieVids[vid]} />)
-
+    const movieGenre = movie.genres 
+    
+    
+  
+    // const genreOptions = Object.keys(movieGenre).map(genre => <Genre key={genre} genre={movieGenre[genre]} />)
+    // const movieVids = movie.videos;
+    // const vidOptions = Object.keys(movieVids).map(vid => <Video key={vid} trailer={movieVids[vid]} />)
   return (
     <div>
+      {console.log(movie.movie)}
+      {/* {console.log(movie.movie.adult)} */}
+
+
+      {/* {console.log(movieGenre)} */}
       <div className="container">
         <Banner heading ={movie.original_title} />
       </div>
@@ -38,13 +48,11 @@ class MovieHome extends Component  {
         <p className="overview">
           {movie.overview}
         </p>
-        {/* <span className="inline">
-          {genreOptions}
-        </span> */}
+       
         <br /><br />
         <h5 className="filmtitle">Trailers:</h5>
         <div className="center-text">
-          {movieVids}
+         
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import MovieHome from './MovieHome'
 import { Link } from 'react-router-dom'
+import { withRouter } from "react-router"
 
 
 const apiKey = '1209dd5b492a1668ef9d6c969ed8e6aa'
@@ -17,14 +18,15 @@ class Movie extends Component {
   }
 
   componentDidMount() {
-    const moviesID = this.props.params.moviesID
+    const moviesID = this.props.match.params.id
+    // console.log(moviesID)
 
     const url = `http://api.themoviedb.org/3/movie/${moviesID}?api_key=${apiKey}&append_to_response=videos`
     axios.get(url)
       .then((response) => {
         const movie = response.data
-        console.log(movie)
-        this.setState({data: movie, loading: false, status: true})
+        console.log(movie.overview)
+        this.setState({ data: { movie }, loading: false, status: true})
       })
       .catch((error) => {
         console.log(error)
@@ -37,31 +39,16 @@ class Movie extends Component {
     const {status} = this.state
     const { data } = this.state
     
-    let display;
-    if (status && !loading) {
-      display = 
-      <MovieHome movie={data} />
-    
-    }
-    // else if (!status && !loading) {
-    //   display = (
-    //     <div>
-    //     <button className="bigButton">
-    //       hmmm We can't seem to find the movie
-    //     </button>
-    //     <Link className="button" to="/">
-    //         Find More Movies
-    //     </Link>
-    //       </div>
-    //   )
-    // }
+  
     return (
       <div>
-        {display}
+        <MovieHome movie={data} />
+        {console.log("right herrrr", data)}
+        
       </div>
     )
   }
   
 }
 
-export default Movie
+export default withRouter(Movie)

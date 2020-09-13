@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Route, Link } from "react-router-dom";
 import MovieBoard from "./Components/MovieBoard";
-//import MovieHome from './Components/MovieHome'
+import Movie from './Components/Movie'
 import "./App.css";
+import Review from "./Components/Review"
 
 //functionality, components, styling
 
@@ -102,98 +103,65 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.reviews);
+    // console.log(this.state.reviews);
     const { data } = this.state;
     const { loading } = this.state;
     const { reviews } = this.state;
     const { review } = this.state;
     const { title } = this.state;
     const { rating } = this.state;
+    
     // const {movie } = this.state
 
     return (
       <div>
    
-        <div className="app-title">
+        <h1 className="app-title">
           Film Fiasco
-          </div>
-          <p className="banner-item">
-          <Link to="/" style={{ textDecoration: "none",  }}>Movies</Link>
-        </p>
-        
-        
-          <form onSubmit={this.onSubmit}>
-            <input
-              type="text"
-              ref={(input) => {
-                this.userTyped = input;
-              }}
-              className="search-input"
+        </h1>
+       
+        <Link to="/" style={{ textDecoration: "none", }}>
+          <h2 className="banner-item">Movies</h2>
+        </Link>
+
+        <form onSubmit={this.onSubmit}>
+          <input
+            type="text"
+            ref={(input) => {
+              this.userTyped = input;
+            }}
+            className="search-input"
             placeholder="Search up Movies"
-            
           />
+        </form>
+      
+        <div>
+          <div class="styling-board">
+               
+            <Route exact path="/">
+              {Object.keys(data).map((film) => (
+                <MovieBoard
+                  id={film}
+                  specs={data[film]}
+                />
+              ))} 
+              <Review
+                reviews={reviews}
+                rating={rating}
+                review={review}
+                title={title}
+                postData={this.postData}
+              />
+            </Route>
+            <Route path="/:id" >
+               <Movie />
+            </Route>
+          </div>
           
-          </form>
-          {this.state.reviews.map((review, index) => {
-            return (
-              <div>
-                <div class="styling-board" key={index}>
-                 
-                  <Route path="/">
-                    {Object.keys(data).map((film) => (
-                      <MovieBoard id={film} specs={data[film]} />
-                    ))}
-                  </Route>
-                </div>
-                <span className="reviews">
-                    <h6>
-                      {" "}
-                      = {review.fields.title}: {review.fields.review}{" "}
-                      {review.fields.rating}
-                    </h6>
-                </span>
-
-               <h2>Post your Own Movie!</h2>
-                <div className="userMovie">
-                <label htmlFor="title">Movie Title</label>
-                <input
-                  type="text"
-                  id="title"
-                  onSubmit={(e) => this.state.title(e.target.value)}
-                  />
-                </div>
-                
-                <div className="userMovie">
-
-                <label htmlFor="title">How would You Rate this movie?</label>
-                <input
-                  type="text"
-                  id="rating"
-                  onSubmit={(e) => this.state.rating(e.target.value)}
-                  />
-                </div>
-                
-                <div className="userMovie">
-                <label htmlFor="text">Review this Movie</label>
-                <input
-                  type="text"
-                  id="review"
-                  onSubmit={(e) => this.state.review(e.target.value)}
-                  />
-                  </div>
-                <button onClick={() => this.postData(title, rating, review)}>
-                  Post
-                </button>
-              </div>
-
-              
-            );
-          })}
-        
-        
+            
+        </div>
       </div>
     );
-  }
-}
+ }}
 
 export default App;

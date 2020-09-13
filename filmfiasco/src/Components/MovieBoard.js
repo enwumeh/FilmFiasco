@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const MovieBoard = (props) => {
   const { specs, id } = props;
-  console.log(specs)
-  console.log(id)
+  // console.log(specs)
+  // console.log(id)
   const picPath = `https://image.tmdb.org/t/p/w200/${specs.poster_path}`;
 
   const linkToMovie = `/${specs.id}`
@@ -23,6 +23,8 @@ const MovieBoard = (props) => {
         </div>
         
     </Link>
+    
+
     </div>
   )
 }
