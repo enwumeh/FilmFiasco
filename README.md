@@ -101,13 +101,13 @@ Priority Matrix "https://drive.google.com/file/d/1iVnp0tSUeg4gWFetqIWI4UwAAzdedH
 
 | Component                        | Priority | Estimated Time  | Time Invested | Actual Time |
 | -------------------------------- | :---:    |  :------------:   | :--------:  | :---------: |
-| Creating Functional API calls    | H        |       5hrs        |             |             |
-| Working/Traversing API endpoints | H        |       8hrs        |             |             |
-| React Router/Navigating to Links | H        |       5hrs        |             |             |
-| Creating components dynamically  | H        |       6hrs        |   14        |             |
-| CSS Styling                      | H        |       7hrs        |             |             |
-| Linting/Debugging                | H        |       6hrs        |             |             |
-| Total                            | H        |       32hrs       |             |             |
+| Creating Functional API calls    | H        |       5hrs        |   15hrs     |     15hrs   |
+| Working/Traversing API endpoints | H        |       8hrs        |   12hrs     |     12hrs   |
+| React Router/Navigating to Links | H        |       5hrs        |    3hrs     |     3hrs    |
+| Creating components dynamically  | H        |       6hrs        |   14hrs     |     14hrs   |
+| CSS Styling                      | H        |       7hrs        |    2hrs     |     2hrs    |
+| Linting/Debugging                | H        |       6hrs        |    1hr      |     1hr     |
+| Total                            | H        |       32hrs       |    48hrs    |     48hrs   |
 
 
 
@@ -128,4 +128,4 @@ let display = <div/>
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+1. changed the possible homepage links from Popular Movies, Upcoming Movies , And New Releases to just Get Movies. I didn't think it was needed, it felt crowded on the home page. A label for each movie detail page to say if it has been released is sufficient. 
