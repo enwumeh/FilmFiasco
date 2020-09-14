@@ -72,16 +72,10 @@ Link to movie details:  "https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_
 
 #### PostMVP  
 
--adding  movie trailer link to Youtube on movie details page
--add information saying that movie does not exist if user types in a title with no matches
--remove search query from movie details page
+- adding  movie trailer link to Youtube on movie details page
+- add information saying that movie does not exist if user types in a title with no matches
+- remove search query from movie details page 
 -center review items 
-
-- working axios /airtable data usage
-- Render data on page dynamically
-- working links  
--all components in place
--CSS with flexbox
 
 
 ## Project Schedule
