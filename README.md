@@ -68,10 +68,14 @@ Link to movie details:  "https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_
 - Render data on page dynamically
 - working links  
 -all components in place
+-CSS with flexbox
 
 #### PostMVP  
 
--CSS additional styling (flexbox)
+-adding  movie trailer link to Youtube on movie details page
+-add information saying that movie does not exist if user types in a title with no matches
+-remove search query from movie details page
+-center review items 
 
 ## Project Schedule
 
@@ -81,10 +85,10 @@ Link to movie details:  "https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_
 |------------ |--------------------------------------------------- | ----------|
 |September 4  | Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |September 4  | Project Approval                                   | Complete
-|September 5  | Sucessful API Usage                                | Incomplete
+|September 5  | Sucessful API Usage                                | Complete
 |September 6  | React App structure with core Components           | Complete
 |September 7  | Adding funcitonality to each component             | Complete
-|September 8-9| Initial Clickable Model                            | Incomplete
+|September 8-9| Initial Clickable Model                            | Complette
 |September 11 | Presentations                                      | Incomplete
 
 ## Priority Matrix
