@@ -69,7 +69,6 @@ Link to movie details:  "https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_
 - working links  
 -CSS with flexbox
 -all components in place
--CSS with flexbox
 
 #### PostMVP  
 
