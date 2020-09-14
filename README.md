@@ -133,4 +133,4 @@ let display = <div/>
 ```
 
 ## Change Log
-1. changed the possible homepage links from Popular Movies, Upcoming Movies , And New Releases to just Get Movies. I didn't think it was needed, it felt crowded on the home page. A label for each movie detail page to say if it has been released is sufficient. 
+- changed the possible homepage links from Popular Movies, Upcoming Movies , And New Releases to just Get Movies. I didn't think it was needed, it felt crowded on the home page. A label for each movie detail page to say if it has been released is sufficient.  a title with no matches
