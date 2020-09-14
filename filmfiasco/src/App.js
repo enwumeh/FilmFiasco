@@ -137,7 +137,7 @@ class App extends Component {
       
         <div>
           <div className="styling-board">
-               
+               {title}
             <Route exact path="/">
               {Object.keys(data).map((film,id) => (
                 <MovieBoard
@@ -145,6 +145,7 @@ class App extends Component {
                   id={film}
                   specs={data[film]}
                 />
+               
               ))} 
               <Review
                 reviews={reviews}

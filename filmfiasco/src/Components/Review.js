@@ -29,13 +29,13 @@ class Review extends Component {
         })}
 
         <h2>Post your Own Movie!</h2>
-        <form>
+        <form className="form" onSubmit={postData}>
           <div className="userMovie">
             <label htmlFor="title">Movie Title</label>
             <input
               type="text"
               id="title"
-              onSubmit={(e) => this.state.title(e.target.value)}
+              // onSubmit={(e) => this.state.title(e.target.value)}
             />
           </div>
 
@@ -44,7 +44,7 @@ class Review extends Component {
             <input
               type="text"
               id="rating"
-              onSubmit={(e) => this.state.rating(e.target.value)}
+              // onSubmit={(e) => this.state.rating(e.target.value)}
             />
           </div>
 
@@ -53,10 +53,10 @@ class Review extends Component {
             <input
               type="text"
               id="review"
-              onSubmit={(e) => this.state.review(e.target.value)}
+              // onSubmit={(e) => this.state.review(e.target.value)}
             />
           </div>
-          <button onClick={() => postData(title, rating, review)}>Post</button>
+          <button onClick={() => this.postData(title, rating, review)}>Post</button>
           </form>
       </div>
     );
