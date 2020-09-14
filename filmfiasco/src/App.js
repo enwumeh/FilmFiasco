@@ -121,7 +121,7 @@ class App extends Component {
         </h1>
        
         <Link to="/" style={{ textDecoration: "none", }}>
-          <h2 className="banner-item">Movies</h2>
+          <h2 className="link-to-home">Movies</h2>
         </Link>
 
         <form onSubmit={this.onSubmit}>
@@ -136,11 +136,12 @@ class App extends Component {
         </form>
       
         <div>
-          <div class="styling-board">
+          <div className="styling-board">
                
             <Route exact path="/">
-              {Object.keys(data).map((film) => (
+              {Object.keys(data).map((film,id) => (
                 <MovieBoard
+                  keyID={id}
                   id={film}
                   specs={data[film]}
                 />

@@ -7,7 +7,8 @@ const Video = (props) => {
 
   return (
     <div>
-<iframe title="trailer" className="iframe-item" src ="linkToYT"/>
+      <iframe title="trailer" className="iframe-item" src="linkToYT" />
+      {console.log(trailer)}
     </div>
   )
 }

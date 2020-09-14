@@ -20,6 +20,12 @@ font-size: 75px;
 font-weight: bold;
 }
 
+.filmtitle {
+  display: inline;
+  padding: 50px;
+  margin: 50px;
+}
+
 .styling-board {
 display: flex;
 flex-direction: row;
@@ -27,33 +33,53 @@ flex-wrap: wrap;
 justify-content: space-between;
 }
 
- .banner-item {
+  .banner-item {
+    margin: 0 auto;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   list-style-type: none;
-
-  
+  display: inline;
+  color: white ;
+  background-color:gray;
 } 
 
+.reviews {
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
 
 form {
   margin: 0 auto;
   text-align: center;
+  
 }
 
 a {
-  color: white;
-  font-weight: bold;
+  color:white;
   margin-left: 15%;
   margin-right: 15%;
+  text-decoration: none;
 }
 
 h6 {
   color: white;
 }
+.title-space {
+display: inline-block;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+
+.review-map {
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
 
 h2 {
   color: rgb(224, 20, 20);
+  margin: 0 auto;
   text-align: center
 }
 
@@ -77,5 +103,10 @@ button {
   width: 40px;
   font-weight: bold;
   
+  
+}
+
+ol {
+  display: block
 }
 

@@ -11,7 +11,7 @@ class Movie extends Component {
   constructor() {
     super()
     this.state = {
-      data: {},
+      data: [],
       status: false,
       loading: true
     }
@@ -25,8 +25,8 @@ class Movie extends Component {
     axios.get(url)
       .then((response) => {
         const movie = response.data
-        console.log(movie.overview)
-        this.setState({ data: { movie }, loading: false, status: true})
+        console.log(typeof movie)
+        this.setState({ data: movie , loading: false, status: true})
       })
       .catch((error) => {
         console.log(error)

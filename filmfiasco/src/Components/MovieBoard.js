@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const MovieBoard = (props) => {
-  const { specs, id } = props;
+  const { specs, id, keyID } = props;
   // console.log(specs)
   // console.log(id)
   const picPath = `https://image.tmdb.org/t/p/w200/${specs.poster_path}`;
@@ -17,7 +17,7 @@ const MovieBoard = (props) => {
 
   return (
   
-  <div className="container">
+  <div className="container" key={keyID}>
     <Link to={linkToMovie}>
         <div className="board" style={style}>
         </div>
