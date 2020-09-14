@@ -67,7 +67,7 @@ Link to movie details:  "https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_
 - working axios /airtable data usage
 - Render data on page dynamically
 - working links
---all components in place
+-all components in place
 -CSS with flexbox
 
 #### PostMVP  
