@@ -77,6 +77,13 @@ Link to movie details:  "https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_
 -remove search query from movie details page
 -center review items 
 
+- working axios /airtable data usage
+- Render data on page dynamically
+- working links  
+-all components in place
+-CSS with flexbox
+
+
 ## Project Schedule
 
 
