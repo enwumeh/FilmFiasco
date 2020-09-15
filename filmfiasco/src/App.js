@@ -1,3 +1,7 @@
+// && echo '/* /index.html 200' | cat >dist/_redirects"
+
+
+
 import React, { Component } from "react";
 import axios from "axios";
 import { Route, Link } from "react-router-dom";

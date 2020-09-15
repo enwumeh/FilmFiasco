@@ -22,23 +22,19 @@
 
 @media only screen and (max-width: 500px) {
   body{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px;
+    
+    font-size: 20px;
     color: green;
-    height: 90vh;
-    width: 80%;
+    
   }
 }
 
 @media only screen and (min-width: 501px) and (max-width: 768px) {
     body{
-      text-align: center;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 10px;
+      
+      font-size: 40px;
       color:pink;
-      height: 90vh;
-      width: 80%;
+      
     }
   }
   

@@ -42,7 +42,6 @@ class Movie extends Component {
     return (
       <div>
         <MovieHome movie={data} />
-        {console.log("right herrrr", data)}
       </div>
     );
   }
