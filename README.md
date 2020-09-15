@@ -66,12 +66,17 @@ Link to movie details:  "https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_
 
 - working axios /airtable data usage
 - Render data on page dynamically
-- working links  
--all components in place
+- working links
+- all components in place
+- CSS with flexbox
 
 #### PostMVP  
 
--CSS additional styling (flexbox)
+- adding  movie trailer link to Youtube on movie details page
+- add information saying that movie does not exist if user types in a title with no matches
+- remove search query from movie details page 
+- center review items 
+
 
 ## Project Schedule
 
@@ -81,10 +86,10 @@ Link to movie details:  "https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_
 |------------ |--------------------------------------------------- | ----------|
 |September 4  | Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |September 4  | Project Approval                                   | Complete
-|September 5  | Sucessful API Usage                                | Incomplete
+|September 5  | Sucessful API Usage                                | Complete
 |September 6  | React App structure with core Components           | Complete
 |September 7  | Adding funcitonality to each component             | Complete
-|September 8-9| Initial Clickable Model                            | Incomplete
+|September 8-9| Initial Clickable Model                            | Complette
 |September 11 | Presentations                                      | Incomplete
 
 ## Priority Matrix
@@ -101,13 +106,13 @@ Priority Matrix "https://drive.google.com/file/d/1iVnp0tSUeg4gWFetqIWI4UwAAzdedH
 
 | Component                        | Priority | Estimated Time  | Time Invested | Actual Time |
 | -------------------------------- | :---:    |  :------------:   | :--------:  | :---------: |
-| Creating Functional API calls    | H        |       5hrs        |             |             |
-| Working/Traversing API endpoints | H        |       8hrs        |             |             |
-| React Router/Navigating to Links | H        |       5hrs        |             |             |
-| Creating components dynamically  | H        |       6hrs        |   14        |             |
-| CSS Styling                      | H        |       7hrs        |             |             |
-| Linting/Debugging                | H        |       6hrs        |             |             |
-| Total                            | H        |       32hrs       |             |             |
+| Creating Functional API calls    | H        |       5hrs        |   15hrs     |     15hrs   |
+| Working/Traversing API endpoints | H        |       8hrs        |   12hrs     |     12hrs   |
+| React Router/Navigating to Links | H        |       5hrs        |    3hrs     |     3hrs    |
+| Creating components dynamically  | H        |       6hrs        |   14hrs     |     14hrs   |
+| CSS Styling                      | H        |       7hrs        |    2hrs     |     2hrs    |
+| Linting/Debugging                | H        |       6hrs        |    1hr      |     1hr     |
+| Total                            | H        |       32hrs       |    48hrs    |     48hrs   |
 
 
 
@@ -128,4 +133,4 @@ let display = <div/>
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+- changed the possible homepage links from Popular Movies, Upcoming Movies , And New Releases to just Get Movies. I didn't think it was needed, it felt crowded on the home page. A label for each movie detail page to say if it has been released is sufficient.  a title with no matches

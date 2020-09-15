@@ -1,14 +1,14 @@
 /* for ipad tablet */
-@media (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+/* @media (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   .app-title {
     color: blue;
     text-align: center;
-    font-size: 75px;
-  }
-}
+    font-size: 75px; */
+  /* } */
+/* } */
 
 /* for iphone */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+/* @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .styling-board {
     display: flex;
     flex-direction: row;
@@ -18,7 +18,32 @@
     text-align: center;
     font-size: 75px;
   }
+} */
+
+@media only screen and (max-width: 500px) {
+  body{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: green;
+    height: 90vh;
+    width: 80%;
+  }
 }
+
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+    body{
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      color:pink;
+      height: 90vh;
+      width: 80%;
+    }
+  }
+  
+
+
 
 body {
   background-color: #4b1910;
@@ -140,4 +165,4 @@ ol {
 
    
   
-}
+  }

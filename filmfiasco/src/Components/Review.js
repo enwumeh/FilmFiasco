@@ -1,62 +1,70 @@
 import React, { Component } from "react";
 
 class Review extends Component {
-  constructor(props) {
+  constructor() {
     super();
   }
 
-  render() {
-    const { reviews, title, rating, review, postData } = this.props;
 
+
+  render() {
+    const { reviews, title, review, postData, handleChange } = this.props;
+  
     return (
       <div>
         <div className="reviews">The Creator's Faves</div>
-        {reviews.map((review, index) => {
+        {reviews.map((r, index) => {
           return (
-            <>
+            <React.Fragment key={index}>
               <div className="review-map">
                 <br></br>
                 <br></br>
                 <br></br>
                 {/* <h6> */}
-                <div>{review.fields.title}</div>
-                <div>{review.fields.review}</div>
-                <div>{review.fields.rating}</div>
+                <div>{r.fields.title}</div>
+                <div>{r.fields.review}</div>
+                {/* <div>{r.fields.rating}</div> */}
                 {/* </h6> */}
               </div>
-            </>
+            </React.Fragment>
           );
         })}
 
         <h2>Post your Own Movie!</h2>
-        <form className="form" onSubmit={postData}>
+        <form className="form" onSubmit={e => postData(e)}>
           <div className="userMovie">
             <label htmlFor="title">Movie Title</label>
             <input
               type="text"
               id="title"
-              // onSubmit={(e) => this.state.title(e.target.value)}
+              name="title"
+              value={title}
+              onChange={handleChange}
             />
           </div>
 
-          <div className="userMovie">
-            <label htmlFor="title">How would You Rate this movie?</label>
+          {/* <div className="userMovie">
+            <label htmlFor="rating">How would You Rate this movie?</label>
             <input
               type="text"
-              id="rating"
-              // onSubmit={(e) => this.state.rating(e.target.value)}
+              // id="rating"
+              name="rating"
+              value={rating}
+              onChange={handleChange}
             />
-          </div>
+          </div> */}
 
           <div className="userMovie">
-            <label htmlFor="text">Review this Movie</label>
+            <label htmlFor="review">Review this Movie</label>
             <input
               type="text"
-              id="review"
-              // onSubmit={(e) => this.state.review(e.target.value)}
+              // id="review"
+              name="review"
+              value={review}
+              onChange={handleChange}
             />
           </div>
-          <button onClick={() => this.postData(title, rating, review)}>Post</button>
+          <input type="submit" value="post"/>
           </form>
       </div>
     );

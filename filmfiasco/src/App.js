@@ -17,9 +17,12 @@ class App extends Component {
       loading: true,
       data: [],
       reviews: [],
-      title: " ",
-      review: " ",
-      rating: " ",
+      fields: {
+        title: "",
+        review: "",
+       
+
+      }
     };
 
     //make sure to give credit to any sources!
@@ -44,6 +47,19 @@ class App extends Component {
       });
   }
 
+  handleChange = (e) => {
+    // console.log(e.target.value)
+    const { name, value } = e.target
+    // console.log({ ...this.props.fields })
+    this.setState({
+      fields: {
+        ...this.state.fields,
+        [name]: value
+      }
+    })
+
+  }
+
   componentDidMount() {
     this.fetchData(
       `https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`
@@ -61,25 +77,18 @@ class App extends Component {
     this.setState({ reviews: response.data.records });
   };
 
-  postData = async (title, review, rating) => {
+  postData = async (e) => {
+    e.preventDefault()
     const airtableUrl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/mymoviedata`;
-    const posted = await axios.post(
-      airtableUrl,
-      {
-        fields: {
-          title,
-          review,
-          rating,
-        },
+    const config = {
+      headers: {
+        "Authorization": `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
+        "Content-Type": "application/json",
       },
-      {
-        headers: {
-          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    this.setState({ title: posted.data.records });
+    }
+    const posted = await axios.post(airtableUrl, { fields: this.state.fields }, config);
+
+    
 
   };
 
@@ -107,9 +116,9 @@ class App extends Component {
     const { data } = this.state;
     const { loading } = this.state;
     const { reviews } = this.state;
-    const { review } = this.state;
-    const { title } = this.state;
-    const { rating } = this.state;
+    const { review } = this.state.fields;
+    const { title } = this.state.fields;
+    // const { rating } = this.state.fields;
     
     // const {movie } = this.state
 
@@ -139,20 +148,23 @@ class App extends Component {
           <div className="styling-board">
                {title}
             <Route exact path="/">
-              {Object.keys(data).map((film,id) => (
+              {Object.keys(data).map((film, id) => (
+                <React.Fragment key={id}>
                 <MovieBoard
                   keyID={id}
                   id={film}
                   specs={data[film]}
                 />
-               
+               </React.Fragment>
               ))} 
               <Review
+                fields={this.state.fields}
                 reviews={reviews}
-                rating={rating}
+                // ={rating}rating
                 review={review}
                 title={title}
                 postData={this.postData}
+                handleChange={this.handleChange}
               />
             </Route>
             <Route path="/:id" >
