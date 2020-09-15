@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Genre from "../movieLink/Genre";
-import Video from "../movieLink/Video";
+// import Genre from "../movieLink/Genre";
+// import Video from "../movieLink/Video";
 import Banner from "../movieLink/Banner";
-import { render } from "react-dom";
+// import { render } from "react-dom";
 
 class MovieHome extends Component {
   constructor(props) {
@@ -16,12 +16,12 @@ class MovieHome extends Component {
     const { movie } = this.props;
     const picPath = `https://image.tmdb.org/t/p/w200/${movie.poster_path}`;
     const styles = {
-      // backgroundImage: `url(${picPath})`
-      backgroundImage: `url(${ picPath })`,
+      backgroundImage: `url(${picPath})`
+      // backgroundImage: `url(${ picPath })`,
     };
 
     //list of possible movie genres
-    const movieGenre = movie.genres;
+    // const movieGenre = movie.genres;
 
     // let genreOptions = Object.keys(movieGenre).map(genre => <Genre key={genre} genre={movieGenre[genre]} />)
     // const movieVids = movie.videos;

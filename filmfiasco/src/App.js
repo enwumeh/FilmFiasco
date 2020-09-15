@@ -83,14 +83,14 @@ class App extends Component {
 
   postData = async (e) => {
     e.preventDefault()
-    const airtableUrl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/mymoviedata`;
-    const config = {
-      headers: {
-        "Authorization": `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
-        "Content-Type": "application/json",
-      },
-    }
-    const posted = await axios.post(airtableUrl, { fields: this.state.fields }, config);
+    // const airtableUrl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/mymoviedata`;
+    // const config = {
+    //   headers: {
+    //     "Authorization": `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
+    //     "Content-Type": "application/json",
+    //   },
+    // }
+    // const posted = await axios.post(airtableUrl, { fields: this.state.fields }, config);
 
     
 
@@ -118,7 +118,7 @@ class App extends Component {
   render() {
     // console.log(this.state.reviews);
     const { data } = this.state;
-    const { loading } = this.state;
+    // const { loading } = this.state;
     const { reviews } = this.state;
     const { review } = this.state.fields;
     const { title } = this.state.fields;

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const MovieBoard = (props) => {
-  const { specs, id, keyID } = props;
+  const { specs,  keyID } = props;
   // console.log(specs)
   // console.log(id)
   const picPath = `https://image.tmdb.org/t/p/w200/${specs.poster_path}`;

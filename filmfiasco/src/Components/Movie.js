@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import MovieHome from "./MovieHome";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 
 const apiKey = "1209dd5b492a1668ef9d6c969ed8e6aa";
@@ -35,8 +35,8 @@ class Movie extends Component {
   }
 
   render() {
-    const { loading } = this.state;
-    const { status } = this.state;
+    // const { loading } = this.state;
+    // const { status } = this.state;
     const { data } = this.state;
 
     return (
