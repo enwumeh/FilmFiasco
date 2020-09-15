@@ -37,12 +37,12 @@ class App extends Component {
   }
 
   //getting data from API
-  fetchData(dataSender) {
+  fetchData(url) {
     axios
-      .get(dataSender)
+      .get(url)
       .then((response) => {
         const theData = response.data.results;
-        console.log(theData);
+        // console.log(theData);
         this.setState({ data: theData, loading: false });
       })
       .catch((error) => {

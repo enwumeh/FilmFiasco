@@ -14,11 +14,13 @@ class MovieHome extends Component {
 
   render() {
     const { movie } = this.props;
-    const picPath = `https://image.tmdb.org/t/p/w200/${movie.poster_path}`;
-    const styles = {
-      backgroundImage: `url(${picPath})`
+    console.log(movie)
+    // const picPath = movie && `https://image.tmdb.org/t/p/w200/${movie.poster_path}`;
+    // const styles = {
+    //   backgroundImage: `url(${picPath})`
+
       // backgroundImage: `url(${ picPath })`,
-    };
+    // };
 
     //list of possible movie genres
     // const movieGenre = movie.genres;
@@ -28,16 +30,15 @@ class MovieHome extends Component {
     // const vidOptions = Object.keys(movieVids).map(vid => <Video key={vid} trailer={movieVids[vid]} />)
     return (
       <div>
-        {console.log(movie.genres)}
+        {/* {console.log(movie.genres)} */}
 
         <div className="container">
           <Banner heading={movie.title} />
 
-          <div className="board" style={styles}>
-            {picPath}
+          <div className="board" style={{backgroundImage:`url(https://image.tmdb.org/t/p/w200/${movie.poster_path})`}}>
           </div>
 
-          {console.log("STYLES", styles)}
+          {/* {console.log("STYLES", styles)} */}
           <div className="title-space">
             <h4 className="filmtitle">{movie.title}</h4>
           </div>
@@ -46,8 +47,8 @@ class MovieHome extends Component {
           </div>
           <p className="overview">
             {movie.overview}
-            {console.log(movie)}
-            {console.log(movie.overview)}
+            {/* {console.log(movie)}
+            {console.log(movie.overview)} */}
           </p>
           <br />
           <br />

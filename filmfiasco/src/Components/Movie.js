@@ -25,7 +25,7 @@ class Movie extends Component {
       .get(url)
       .then((response) => {
         const movie = response.data;
-        console.log(typeof movie);
+        // console.log(typeof movie);
         this.setState({ data: movie, loading: false, status: true });
       })
       .catch((error) => {
