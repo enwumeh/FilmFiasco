@@ -4,7 +4,7 @@
     color: blue;
     text-align: center;
     font-size: 75px; */
-  /* } */
+/* } */
 /* } */
 
 /* for iphone */
@@ -21,25 +21,47 @@
 } */
 
 @media only screen and (max-width: 500px) {
-  body{
-    
-    font-size: 20px;
-    color: green;
-    
+  body {
+    font-size: 30px;
+    color: white;
+    margin: 0 auto;
+  }
+  .container {
+    text-align: center;
+    margin: 0 auto;
+   
+  }
+
+  .filmtitle {
+    font-size: 40px;
+    display: content;
+    padding: 30px;
+  }
+
+  .status {
+    display: content;
+    background-color: orangered;
+    font-size: 25px;
+  }
+
+  .overview {
+    font-size: 23px;
+  }
+  .board {
+    margin: 0 auto;
+  }
+
+  li {
+    text-align: center;
   }
 }
 
 @media only screen and (min-width: 501px) and (max-width: 768px) {
-    body{
-      
-      font-size: 40px;
-      color:pink;
-      
-    }
+  body {
+    font-size: 40px;
+    color: pink;
   }
-  
-
-
+}
 
 body {
   background-color: #4b1910;
@@ -153,12 +175,9 @@ ol {
 .board {
   height: 250px;
   width: 75%;
-   /* max-height: 250px; */
-   margin-bottom: 20px;
-   background-repeat: no-repeat; 
-   background-color: #000;
-   background-position: center;
-
-   
-  
-  }
+  /* max-height: 250px; */
+  margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-color: #000;
+  background-position: center;
+}

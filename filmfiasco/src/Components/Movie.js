@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import MovieHome from "./MovieHome";
-// import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 
 const apiKey = "1209dd5b492a1668ef9d6c969ed8e6aa";
@@ -18,7 +17,6 @@ class Movie extends Component {
 
   componentDidMount() {
     const moviesID = this.props.match.params.id;
-    // console.log(moviesID)
 
     const url = `http://api.themoviedb.org/3/movie/${moviesID}?api_key=${apiKey}&append_to_response=videos`;
     axios

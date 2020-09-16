@@ -37,18 +37,16 @@ class App extends Component {
   }
 
   //getting data from API
-  fetchData(url) {
-    axios
-      .get(url)
-      .then((response) => {
-        const theData = response.data.results;
+  fetchData = async (url) => {
+    let response = await axios.get(url)
+    const theData = response.data.results;
         // console.log(theData);
-        this.setState({ data: theData, loading: false });
-      })
-      .catch((error) => {
-        console.log(error);
-        this.setState({ loading: false });
-      });
+    this.setState({ data: theData, loading: false });
+      
+      // .catch((error) => {
+      //   console.log(error);
+      //   this.setState({ loading: false });
+      // });
   }
 
   handleChange = (e) => {
@@ -64,7 +62,7 @@ class App extends Component {
 
   }
 
-  componentDidMount() {
+  componentDidMount =() => {
     this.fetchData(
       `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_MOVIE_KEY}&language=en-US`
     );
@@ -83,14 +81,14 @@ class App extends Component {
 
   postData = async (e) => {
     e.preventDefault()
-    // const airtableUrl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/mymoviedata`;
-    // const config = {
-    //   headers: {
-    //     "Authorization": `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
-    //     "Content-Type": "application/json",
-    //   },
-    // }
-    // const posted = await axios.post(airtableUrl, { fields: this.state.fields }, config);
+    const airtableUrl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/mymoviedata`;
+    const config = {
+      headers: {
+        "Authorization": `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
+        "Content-Type": "application/json",
+      },
+    }
+    await axios.post(airtableUrl, { fields: this.state.fields }, config);
 
     
 
