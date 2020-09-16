@@ -1,19 +1,12 @@
-// && echo '/* /index.html 200' | cat >dist/_redirects"
-
-
-
 import React, { Component } from "react";
 import axios from "axios";
 import { Route, Link } from "react-router-dom";
 import MovieBoard from "./Components/MovieBoard";
-import Movie from './Components/Movie'
+import Movie from "./Components/Movie";
 import "./App.css";
-import Review from "./Components/Review"
+import Review from "./Components/Review";
 
 //functionality, components, styling
-
-
-
 class App extends Component {
   constructor() {
     super();
@@ -24,50 +17,36 @@ class App extends Component {
       fields: {
         title: "",
         review: "",
-       
-
-      }
+      },
     };
 
-    //make sure to give credit to any sources!
-    // this.Url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US`
     this.fetchData = this.fetchData.bind(this);
     this.findMovies = this.findMovies.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-  //getting data from API
   fetchData = async (url) => {
-    let response = await axios.get(url)
+    let response = await axios.get(url);
     const theData = response.data.results;
-        // console.log(theData);
     this.setState({ data: theData, loading: false });
-      
-      // .catch((error) => {
-      //   console.log(error);
-      //   this.setState({ loading: false });
-      // });
-  }
+  };
 
   handleChange = (e) => {
-    // console.log(e.target.value)
-    const { name, value } = e.target
-    // console.log({ ...this.props.fields })
+    const { name, value } = e.target;
     this.setState({
       fields: {
         ...this.state.fields,
-        [name]: value
-      }
-    })
+        [name]: value,
+      },
+    });
+  };
 
-  }
-
-  componentDidMount =() => {
+  componentDidMount = () => {
     this.fetchData(
       `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_MOVIE_KEY}&language=en-US`
     );
     this.getData();
-  }
+  };
 
   getData = async () => {
     const airtableUrl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/mymoviedata`;
@@ -80,18 +59,15 @@ class App extends Component {
   };
 
   postData = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const airtableUrl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/mymoviedata`;
     const config = {
       headers: {
-        "Authorization": `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
+        Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
         "Content-Type": "application/json",
       },
-    }
+    };
     await axios.post(airtableUrl, { fields: this.state.fields }, config);
-
-    
-
   };
 
   //search form onSubmit
@@ -114,24 +90,16 @@ class App extends Component {
   }
 
   render() {
-    // console.log(this.state.reviews);
     const { data } = this.state;
-    // const { loading } = this.state;
     const { reviews } = this.state;
     const { review } = this.state.fields;
     const { title } = this.state.fields;
-    // const { rating } = this.state.fields;
-    
-    // const {movie } = this.state
 
     return (
       <div>
-   
-        <h1 className="app-title">
-          Film Fiasco
-        </h1>
-       
-        <Link to="/" style={{ textDecoration: "none", }}>
+        <h1 className="app-title">Film Fiasco</h1>
+
+        <Link to="/" style={{ textDecoration: "none" }}>
           <h2 className="link-to-home">Movies</h2>
         </Link>
 
@@ -145,39 +113,33 @@ class App extends Component {
             placeholder="Search up Movies"
           />
         </form>
-      
+
         <div>
           <div className="styling-board">
-               {title}
+            {title}
             <Route exact path="/">
               {Object.keys(data).map((film, id) => (
                 <React.Fragment key={id}>
-                <MovieBoard
-                  keyID={id}
-                  id={film}
-                  specs={data[film]}
-                />
-               </React.Fragment>
-              ))} 
+                  <MovieBoard keyID={id} id={film} specs={data[film]} />
+                </React.Fragment>
+              ))}
               <Review
                 fields={this.state.fields}
                 reviews={reviews}
-                // ={rating}rating
                 review={review}
                 title={title}
                 postData={this.postData}
                 handleChange={this.handleChange}
               />
             </Route>
-            <Route path="/:id" >
-               <Movie />
+            <Route path="/:id">
+              <Movie />
             </Route>
           </div>
-          
-            
         </div>
       </div>
     );
- }}
+  }
+}
 
 export default App;

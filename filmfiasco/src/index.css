@@ -1,24 +1,4 @@
-/* for ipad tablet */
-/* @media (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-  .app-title {
-    color: blue;
-    text-align: center;
-    font-size: 75px; */
-/* } */
-/* } */
 
-/* for iphone */
-/* @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
-  .styling-board {
-    display: flex;
-    flex-direction: row;
-  }
-  .app-title {
-    color:pink;
-    text-align: center;
-    font-size: 75px;
-  }
-} */
 
 @media only screen and (max-width: 500px) {
   body {
@@ -29,19 +9,18 @@
   .container {
     text-align: center;
     margin: 0 auto;
-   
   }
 
   .filmtitle {
-    font-size: 40px;
+    /* font-size: 40px; */
     display: content;
     padding: 30px;
   }
 
   .status {
     display: content;
-    background-color: orangered;
-    font-size: 25px;
+    border: 5px solid orangered;
+    font-size: 20px;
   }
 
   .overview {
@@ -51,17 +30,53 @@
     margin: 0 auto;
   }
 
-  li {
-    text-align: center;
+  .banner-item {
+    margin: 20 auto;
+  }
+
+  .full-line {
+    padding: 13px;
+  }
+
+  .banner {
+    margin-bottom: 20px;
   }
 }
 
 @media only screen and (min-width: 501px) and (max-width: 768px) {
   body {
     font-size: 40px;
-    color: pink;
+    color: darkgray;
+    margin: 0 auto;
+    text-align: center;
+
   }
+
+  .container {
+    text-align: center;
+    margin: 0 auto
+  }
+
+  .filmtitle {
+    /* font-size: 40px; */
+    display: content;
+    padding: 30px;
+  }
+
+
+  .board {
+    margin: 0 auto;
+  }
+
+  .banner .banner-item{
+    color: blue;
+  }
+
+   
+
 }
+  
+
 
 body {
   background-color: #4b1910;
@@ -71,6 +86,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0 auto;
+  text-align: center;
 }
 
 code {
@@ -180,4 +197,9 @@ ol {
   background-repeat: no-repeat;
   background-color: #000;
   background-position: center;
+}
+
+.container {
+  text-align: center;
+  margin: 0 auto;
 }

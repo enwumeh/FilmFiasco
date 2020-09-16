@@ -5,13 +5,13 @@ const Banner = (props) => {
   const { heading } = props;
 
   return (
-    <div className="container">
-      <ol className="banner">
+    <div>
+      <div className="full-line">
         <li className="banner banner-item">
           <Link to="/">Movies</Link>
         </li>
         <li className="banner banner-item">{heading}</li>
-      </ol>
+      </div>
     </div>
   );
 };

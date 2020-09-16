@@ -12,10 +12,9 @@ class MovieHome extends Component {
   render() {
     const { movie } = this.props;
     console.log(movie);
-    
+
     return (
       <div>
-
         <div className="container">
           <Banner heading={movie.title} />
 

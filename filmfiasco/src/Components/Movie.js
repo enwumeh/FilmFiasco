@@ -23,7 +23,6 @@ class Movie extends Component {
       .get(url)
       .then((response) => {
         const movie = response.data;
-        // console.log(typeof movie);
         this.setState({ data: movie, loading: false, status: true });
       })
       .catch((error) => {
@@ -33,8 +32,6 @@ class Movie extends Component {
   }
 
   render() {
-    // const { loading } = this.state;
-    // const { status } = this.state;
     const { data } = this.state;
 
     return (
