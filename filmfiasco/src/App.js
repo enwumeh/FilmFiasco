@@ -12,7 +12,7 @@ import Review from "./Components/Review"
 
 //functionality, components, styling
 
-const apiKey = "1209dd5b492a1668ef9d6c969ed8e6aa";
+
 
 class App extends Component {
   constructor() {
@@ -66,7 +66,7 @@ class App extends Component {
 
   componentDidMount() {
     this.fetchData(
-      `https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`
+      `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_MOVIE_KEY}&language=en-US`
     );
     this.getData();
   }
@@ -109,7 +109,7 @@ class App extends Component {
 
   //getting movies using a search query
   findMovies(userMovie) {
-    const movieData = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${userMovie}`;
+    const movieData = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIE_KEY}&query=${userMovie}`;
     console.log(movieData);
     this.setState({ loading: true, data: [] });
     this.fetchData(movieData);
