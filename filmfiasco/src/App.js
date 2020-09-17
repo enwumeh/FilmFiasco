@@ -6,6 +6,8 @@ import Movie from "./Components/Movie";
 import Review from "./Components/Review";
 import "./App.css";
 
+//got inspiration for this idea form https://github.com/akinmaurice/reactflix
+
 //saving variables in state
 class App extends Component {
   constructor() {
@@ -37,7 +39,7 @@ class App extends Component {
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({
-      //setting key and value dynamically, expanding into fields object
+      //setting key and value dynamically in state, expanding into fields object
       fields: {
         ...this.state.fields,
         [name]: value,
@@ -110,7 +112,7 @@ class App extends Component {
         <form onSubmit={this.onSubmit}>
           <input
             type="text"
-            // allowing input to be set dynamically
+            // allowing input to be set dynamically (ref)
             ref={(input) => {
               this.userTyped = input;
             }}

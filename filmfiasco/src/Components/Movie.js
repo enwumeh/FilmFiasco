@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import MovieHome from "./MovieHome";
-//withRouter: conects component to ReacRouter, passes updated RouterProps to Movie component
+//withRouter: connects component to ReactRouter, passes updated RouterProps to Movie component
 import { withRouter } from "react-router";
 
 const apiKey = "1209dd5b492a1668ef9d6c969ed8e6aa";
