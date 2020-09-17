@@ -11,7 +11,6 @@ class MovieHome extends Component {
 
   render() {
     const { movie } = this.props;
-    console.log(movie);
 
     return (
       <div>
@@ -19,6 +18,7 @@ class MovieHome extends Component {
           <Banner heading={movie.title} />
 
           <div
+            //image for each movie in MovieHome. From secondary API
             className="board"
             style={{
               backgroundImage: `url(https://image.tmdb.org/t/p/w200/${movie.poster_path})`,
@@ -32,7 +32,6 @@ class MovieHome extends Component {
             <h4 className="filmtitle">{movie.status}</h4>
           </div>
           <p className="overview">{movie.overview}</p>
-          <br />
         </div>
       </div>
     );

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import MovieHome from "./MovieHome";
+//withRouter: conects component to ReacRouter, passes updated RouterProps to Movie component
 import { withRouter } from "react-router";
 
 const apiKey = "1209dd5b492a1668ef9d6c969ed8e6aa";
@@ -10,12 +11,11 @@ class Movie extends Component {
     super();
     this.state = {
       data: [],
-      status: false,
-      loading: true,
     };
   }
 
   componentDidMount() {
+    //allow access for id object to get passed in
     const moviesID = this.props.match.params.id;
 
     const url = `http://api.themoviedb.org/3/movie/${moviesID}?api_key=${apiKey}&append_to_response=videos`;
@@ -23,11 +23,10 @@ class Movie extends Component {
       .get(url)
       .then((response) => {
         const movie = response.data;
-        this.setState({ data: movie, loading: false, status: true });
+        this.setState({ data: movie });
       })
       .catch((error) => {
         console.log(error);
-        this.setState({ loading: false, status: false });
       });
   }
 

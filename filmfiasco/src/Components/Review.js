@@ -9,6 +9,7 @@ class Review extends Component {
         <div className="reviews">The Creator's Faves</div>
         {reviews.map((r, index) => {
           return (
+            //getting review fields objects. React.Fragment needed to render multiple elements
             <React.Fragment key={index}>
               <div className="review-map">
                 <br></br>
@@ -22,6 +23,7 @@ class Review extends Component {
         })}
 
         <h2>Post your Own Movie!</h2>
+        {/* form for user review input. using POST  */}
         <form className="form" onSubmit={(e) => postData(e)}>
           <div className="userMovie">
             <label htmlFor="title">Movie Title</label>

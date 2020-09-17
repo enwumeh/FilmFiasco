@@ -3,19 +3,14 @@ import { Link } from "react-router-dom";
 
 const MovieBoard = (props) => {
   const { specs, keyID } = props;
-  const picPath = `https://image.tmdb.org/t/p/w200/${specs.poster_path}`;
-
+  // links a  path of for each movie based on its id
   const linkToMovie = `/${specs.id}`;
-  const style = {
-    backgroundImage: `url(${picPath})`,
-    width: "200px",
-    height: "150px",
-  };
+  
 
   return (
     <div className="container" key={keyID}>
       <Link to={linkToMovie}>
-        <div className="board" style={style}></div>
+        <div className="board"></div>
       </Link>
     </div>
   );

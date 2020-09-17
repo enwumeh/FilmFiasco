@@ -1,39 +1,43 @@
 import React, { Component } from "react";
-import axios from "axios";
 import { Route, Link } from "react-router-dom";
+import axios from "axios";
 import MovieBoard from "./Components/MovieBoard";
 import Movie from "./Components/Movie";
-import "./App.css";
 import Review from "./Components/Review";
+import "./App.css";
 
-//functionality, components, styling
+//saving variables in state
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      loading: true,
       data: [],
+      //my personal reviews that come from airtable
       reviews: [],
       fields: {
+        //for form that takes user's input and does POST in airtable
         title: "",
         review: "",
       },
     };
 
+    //setting instances for class
     this.fetchData = this.fetchData.bind(this);
     this.findMovies = this.findMovies.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-
+  //gets secondary api url
   fetchData = async (url) => {
     let response = await axios.get(url);
     const theData = response.data.results;
-    this.setState({ data: theData, loading: false });
+    this.setState({ data: theData });
   };
 
+  //set state for user inputs on form. used for Review component
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({
+      //setting key and value dynamically, expanding into fields object
       fields: {
         ...this.state.fields,
         [name]: value,
@@ -48,6 +52,7 @@ class App extends Component {
     this.getData();
   };
 
+  //airtable GET request
   getData = async () => {
     const airtableUrl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/mymoviedata`;
     const response = await axios.get(airtableUrl, {
@@ -58,6 +63,7 @@ class App extends Component {
     this.setState({ reviews: response.data.records });
   };
 
+  //airtable POST request
   postData = async (e) => {
     e.preventDefault();
     const airtableUrl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/mymoviedata`;
@@ -70,7 +76,7 @@ class App extends Component {
     await axios.post(airtableUrl, { fields: this.state.fields }, config);
   };
 
-  //search form onSubmit
+  //search form to get queried movies by submit
   onSubmit(event) {
     event.preventDefault();
     const userInput = this.userTyped.value;
@@ -81,11 +87,9 @@ class App extends Component {
     }
   }
 
-  //getting movies using a search query
+  //getting movies using a search query. fetchData is the api call
   findMovies(userMovie) {
     const movieData = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIE_KEY}&query=${userMovie}`;
-    console.log(movieData);
-    this.setState({ loading: true, data: [] });
     this.fetchData(movieData);
   }
 
@@ -97,7 +101,7 @@ class App extends Component {
 
     return (
       <div>
-        <h1 className="app-title">Film Fiasco</h1>
+        <h1 className="title">Film Fiasco</h1>
 
         <Link to="/" style={{ textDecoration: "none" }}>
           <h2 className="link-to-home">Movies</h2>
@@ -106,11 +110,11 @@ class App extends Component {
         <form onSubmit={this.onSubmit}>
           <input
             type="text"
+            // allowing input to be set dynamically
             ref={(input) => {
               this.userTyped = input;
             }}
-            className="search-input"
-            placeholder="Search up Movies"
+            placeholder="Search"
           />
         </form>
 
@@ -118,6 +122,8 @@ class App extends Component {
           <div className="styling-board">
             {title}
             <Route exact path="/">
+              {/* mapping through data array and rendering MovieBoard along with its props. React.Fragment is to return many elements without a container div/wrapper*/}
+              to
               {Object.keys(data).map((film, id) => (
                 <React.Fragment key={id}>
                   <MovieBoard keyID={id} id={film} specs={data[film]} />
